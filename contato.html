@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ong Criança Leo de Sá</title>
     <link rel="stylesheet" href="static/css/style.css">
+    <link rel="stylesheet" href="static/css/contato.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -34,7 +35,25 @@
     </header>
     <main class="main">
         <div class="container">
-            <section class="inicio"></section>
+            <section class="contato">
+                <div class="contato__inner">
+                    <h2>Entre em contato</h2>
+                    <form class="contato__form" method="post" action="#" novalidate>
+                        <label for="nome">Nome</label>
+                        <input id="nome" name="nome" type="text" placeholder="Seu nome" required>
+
+                        <label for="email">E-mail</label>
+                        <input id="email" name="email" type="email" placeholder="seu@exemplo.com" required>
+
+                        <label for="mensagem">Mensagem</label>
+                        <textarea id="mensagem" name="mensagem" rows="6" placeholder="Escreva sua mensagem..." required></textarea>
+
+                        <div class="contato__actions">
+                            <button type="submit" class="contato__btn">Enviar</button>
+                        </div>
+                    </form>
+                </div>
+            </section>
         </div>
     </main>
     <footer class="footer">

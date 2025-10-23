@@ -1,0 +1,69 @@
+.contato {
+    padding: 2.5rem 0;
+}
+.contato__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--branco);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.contato__inner h2 {
+    margin: 0 0 1rem;
+    color: var(--preto);
+    font-size: 1.5rem;
+    font-family: inherit;
+}
+.contato__form label {
+    display: block;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0.25rem;
+    color: var(--preto);
+    font-family: inherit;
+}
+.contato__form input[type="text"],
+.contato__form input[type="email"],
+.contato__form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--preto);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: var(--branco);
+    color: var(--preto);
+}
+.contato__form textarea { resize: vertical; min-height: 140px; }
+
+.contato__actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+.contato__btn {
+    background: var(--azul-claro);
+    color: var(--branco);
+    border: none;
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    will-change: transform;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.contato__btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+.contato__btn:active { transform: translateY(1px); }
+
+.contato__btn:focus-visible {
+    outline: 3px solid rgba(0,0,0,0.08);
+    outline-offset: 3px;
+}
