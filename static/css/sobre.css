@@ -1,7 +1,10 @@
 
-.container_s {
+/* container */
+.containers {
+  width: 100%;
+  min-height: 100vh;
   background-color: var(--branco);
-  color: var(--preto);
+>>>>>>> 2352551 (atualização da página sobre)
   display: flex;
   flex-direction: column;
 }
@@ -21,6 +24,10 @@
   gap: 30px;
   flex-wrap: wrap;
   margin-bottom: 40px;
+}
+
+p{
+  color: var(--preto)
 }
 
 .texto-sobre {
