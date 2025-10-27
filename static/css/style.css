@@ -34,9 +34,7 @@ body {
     max-width:1220px;
     margin: 0 auto;
 }
-.container section{
-  background-color: var(--branco);
-}
+
 header {
     color: var(--preto);
     position:fixed;
