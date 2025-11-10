@@ -116,43 +116,113 @@ header {
     padding:120px 0 20px 0;
 }
 .footer {
-    color:var(--branco);
-    background-color:var(--azul-escuro);
+    background-color: var(--azul-escuro);
     padding: 2rem 0;
-    text-align: center;
-}
-.footer_cont{
-    display: flex;
-    margin: 0 auto;
-    justify-content: space-between;
-    flex-wrap: wrap;
-    gap: 1rem;
-    align-items:center;
-}
-.footer_logo h2{
-    font-size:16px;
-    margin:0;
-}
-.footer_info p{
-    margin:3px 0;
-    font-size:14px;
-    opacity:0.9;
+    color: inherit;
+    font-size: 0.95rem;
     color: var(--branco);
-}
-.footer_social a{
-    color: var(--branco);
-    margin: 0 0.5rem;
-    font-size: 20px;
-    text-decoration: none;
-    display: inline-block; 
-    transition: transform 0.2s ease, filter 0.2s ease;
-    will-change: transform;
-}
-.footer_social a:hover{
-    transform: scale(1.2); 
-    filter: brightness(1.2); 
 }
 
+.footer_top {
+  display: flex;
+  gap: 1.25rem;
+  align-items: center;
+  flex-wrap: wrap;
+  border-bottom: 1px solid rgba(0,0,0,0.06);
+  padding-bottom: 1rem;
+}
+
+.footer_top > div {
+  flex: 1 1 200px;
+  min-width: 160px;;
+}
+.footer_lgo, .footer_address, .footer_links, .footer_social {
+   align-items: center;
+   text-align: center;
+}
+.footer_logo .footer_tag {
+  margin: 0.25rem 0 0;
+  font-size: 0.9rem;
+}
+
+.footer_address address {
+  font-style: normal;
+  line-height: 1.35;
+}
+.footer_address address a {
+  list-style: none;
+}
+
+.footer_address a,
+.footer_address address a {
+  color: inherit !important;
+  text-decoration: none !important;
+  opacity: 1 !important;
+  transition: none !important;
+  cursor: pointer;
+}
+
+.footer_address a:hover,
+.footer_address a:focus,
+.footer_address a:active {
+  transform: none !important;
+  opacity: 1 !important;
+  text-decoration: none !important;
+}
+
+.footer_links ul {
+  list-style: none;
+  padding: 0;
+  margin: 0.25rem 0 0 0;
+}
+
+.footer_links li {
+  margin: 0.35rem 0;
+}
+
+.footer_links a {
+  color: inherit;
+  text-decoration: none;
+  opacity: 0.95;
+}
+
+.footer_social .social_icons a {
+  margin-right: 0.6rem;
+  color: inherit;
+  font-size: 1.1rem;
+  text-decoration: none;
+}
+
+.footer_bottom {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 1rem;
+  font-size: 0.9rem;
+}
+
+.footer_links a,
+.footer_social .social_icons a,
+.footer_address a {
+  transition: transform 160ms ease, opacity 160ms ease;
+  display: inline-block;
+  transform-origin: center;
+}
+
+.footer_links a:hover,
+.footer_social .social_icons a:hover,
+.footer_address a:hover {
+  transform: translateY(-3px) scale(1.06);
+  opacity: 1;
+}
+
+.footer_links a:focus,
+.footer_social .social_icons a:focus,
+.footer_address a:focus {
+  outline: 2px solid rgba(255,255,255,0.12);
+  outline-offset: 3px;
+}
 
 @media (max-width: 480px){
     .logo{
@@ -222,13 +292,54 @@ header {
     .header_mobile.open .mobile-linha:nth-child(3){
         transform: translateY(-6px) rotate(-45deg);
     }
+
     .footer_cont{
+        display: flex;
         flex-direction: column;
-        gap: 1.5rem;
-        text-align:center;
+        gap: 0.75rem; 
+
+        align-items: stretch;
+    }
+    .footer_top{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        gap: 0.75rem;
+        align-items: center;
+        text-align: center;
+        padding-bottom: 0.75rem;
+        border-bottom: 1px solid rgba(255,255,255,0.04);
+    }
+
+    .footer_top > div {
+        flex: none;
+        min-width: 0;
+        padding: 0.45rem 0.5rem;
+    }
+
+    .footer_social .social_icons{
+        display: flex;
+        gap: 0.5rem;
+        justify-content: center;
+        align-items: center;
+    }
+
+    .footer_bottom{
+        flex-direction: column;
+        gap: 0.25rem;
+        text-align: center;
     }
 }
-@media (max-width: 1024px){}
+@media (max-width: 480px){
+    .footer_top{
+        grid-template-columns: 1fr;
+    }
+    .footer_top > div {
+        padding: 0.35rem 0;
+    }
+    .footer_cont{
+        gap: 0.6rem;
+    }
+}
 @media (prefers-color-scheme: dark) { 
     .footer, .footer_social a{
         color:var(--preto);

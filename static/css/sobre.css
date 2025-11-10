@@ -22,10 +22,6 @@
   margin-bottom: 40px;
 }
 
-p{
-  color: var(--preto)
-}
-
 .texto-sobre {
   flex: 1 1 55%;
 }
