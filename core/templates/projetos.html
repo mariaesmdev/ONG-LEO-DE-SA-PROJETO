@@ -1,30 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ong Criança Leo de Sá</title>
-    <link rel="stylesheet" href="static/css/style.css">
-
-    <link rel="stylesheet" href="static/css/projetos.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/projetos.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    {% load static %}
 </head>
 <body>
-    <header>
+<header>
         <div class="container header_cont">
-            <a href="index.html" class="logo"> 
-                <img src="static/assets/icons/logo.png" alt="Logo Instituto da Criança Léo de Sá" width="48" height="48">
+            <a href="{% url 'index' %}" class="logo"> 
+                <img src="{% static 'assets/icons/logo.png' %}" alt="Logo Instituto da Criança Léo de Sá" width="48" height="48">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav_lista">
-                    <li><a href="index.html" class="nav_link">Inicio</a></li>
-                    <li><a href="sobre.html" class="nav_link">Sobre</a></li>
-                    <li><a href="projetos.html" class="nav_link">Projetos</a></li>
-                    <li><a href="doacao.html" class="nav_link">Fazer Doação</a></li>
-                    <li><a href="contato.html" class="nav_link">Contato</a></li>
+                    <li><a href="{% url 'index' %}" class="nav_link">Inicio</a></li>
+                    <li><a href="{% url 'sobre' %}" class="nav_link">Sobre</a></li>
+                    <li><a href="{% url 'projetos' %}" class="nav_link">Projetos</a></li>
+                    <li><a href="{% url 'doacao' %}" class="nav_link">Fazer Doação</a></li>
+                    <li><a href="{% url 'contato' %}" class="nav_link">Contato</a></li>
                 </ul>
             </nav>
 
@@ -46,7 +47,7 @@
                     <p>Mais do que aulas, o Samba Lata é um espaço de convivência, disciplina e valorização da cultura brasileira, preparando os jovens para o futuro com **ritmo e esperança**.</p>
                 </div>
                 <div class="img-projeto">
-                    <img src="static/assets/fotos/samba lata.jpg" alt="Foto do projeto Samba Lata">
+                    <img src="{% static 'assets/fotos/samba lata.jpg' %}" alt="Foto do projeto Samba Lata">
                 </div>
             </section>
 
@@ -59,7 +60,7 @@
                     <p>Através de parcerias, o projeto oferece orientação de carreira e simulações de entrevistas, garantindo que os participantes estejam prontos para os **desafios profissionais** e para construir um futuro de sucesso.</p>
                 </div>
                 <div class="img-projeto">
-                    <img src="static/assets/fotos/oficina jovem.jpg" alt="Foto do projeto Oficina Jovem">
+                    <img src="{% static 'assets/fotos/oficina jovem.jpg' %}" alt="Foto do projeto Oficina Jovem">
                 </div>
             </section>
 
@@ -72,7 +73,7 @@
                     <p>Além da assistência material, organizamos mutirões de saúde e cidadania, **promovendo a união** e o acesso a serviços essenciais para o bem-estar de todos.</p>
                 </div>
                 <div class="img-projeto">
-                    <img src="static/assets/fotos/Ação na Amendoeira.jpg" alt="Foto do projeto Ação na Amendoeira">
+                    <img src="{% static 'assets/fotos/Ação na Amendoeira.jpg' %}" alt="Foto do projeto Ação na Amendoeira">
                 </div>
             </section>
 
@@ -85,7 +86,7 @@
                     <p>Mantemos uma biblioteca comunitária e promovemos a leitura através de contação de histórias e eventos culturais, incentivando o **conhecimento** e a **imaginação**.</p>
                 </div>
                 <div class="img-projeto">
-                    <img src="static/assets/fotos/foto1.jpg" alt="Foto de crianças estudando">
+                    <img src="{% static 'assets/fotos/foto1.jpg' %}" alt="Foto de crianças estudando">
                 </div>
             </section>
 
@@ -112,11 +113,11 @@
                 <div class="footer_links">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="doacao.html">Fazer Doação</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="{% url 'index' %}">Início</a></li>
+                        <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                        <li><a href="{% url 'projetos' %}">Projetos</a></li>
+                        <li><a href="{% url 'doacao' %}">Fazer Doação</a></li>
+                        <li><a href="{% url 'contato' %}">Contato</a></li>
                     </ul>
                 </div>
 
@@ -140,7 +141,7 @@
             </div>
         </div>
     </footer>
-    <script src="static/js/script.js"></script>
-    <script src="static/js/projetos.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/projetos.js' %}"></script>
 </body>
 </html>

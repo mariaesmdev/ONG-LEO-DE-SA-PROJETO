@@ -1,11 +1,13 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    {% load static %}
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ong Criança Leo de Sá</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/home.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/home.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -15,16 +17,16 @@
 <body>
     <header>
         <div class="container header_cont">
-            <a href="index.html" class="logo"> 
-                <img src="static/assets/icons/logo.png" alt="Logo Instituto da Criança Léo de Sá" width="48" height="48">
+            <a href="{% url 'index' %}" class="logo"> 
+                <img src="{% static 'assets/icons/logo.png' %}" alt="Logo Instituto da Criança Léo de Sá" width="48" height="48">
             </a>
             <nav class="nav" id="nav">
                 <ul class="nav_lista">
-                    <li><a href="index.html" class="nav_link">Inicio</a></li>
-                    <li><a href="sobre.html" class="nav_link">Sobre</a></li>
-                    <li><a href="projetos.html" class="nav_link">Projetos</a></li>
-                    <li><a href="doacao.html" class="nav_link">Fazer Doação</a></li>
-                    <li><a href="contato.html" class="nav_link">Contato</a></li>
+                    <li><a href="{% url 'index' %}" class="nav_link">Inicio</a></li>
+                    <li><a href="{% url 'sobre' %}" class="nav_link">Sobre</a></li>
+                    <li><a href="{% url 'projetos' %}" class="nav_link">Projetos</a></li>
+                    <li><a href="{% url 'doacao' %}" class="nav_link">Fazer Doação</a></li>
+                    <li><a href="{% url 'contato' %}" class="nav_link">Contato</a></li>
                 </ul>
             </nav>
 
@@ -41,11 +43,11 @@
             <section class="inicio">
                 <div class="carousel">
                   <div class="carousel-images">
-                     <img src="static/assets/fotos/sobre.jpg" alt="Imagem 1" class="carousel-item">
-                     <img src="static/assets/fotos/Apresentação do Samba Lata no Fabio Hatman.jpg" alt="Imagem 1" class="carousel-item">
-                     <img src="static/assets/fotos/Festa_IMG1.jpg" alt="Imagem 2" class="carousel-item">
-                     <img src="static/assets/fotos/Festa_IMG2.jpg" alt="Imagem 3" class="carousel-item">
-                     <img src="static/assets/fotos/Apresentação samba lata 2.jpg" alt="Imagem 1" class="carousel-item">
+                     <img src="{% static 'assets/fotos/sobre.jpg' %}" alt="Imagem 1" class="carousel-item">
+                     <img src="{% static 'assets/fotos/Apresentação do Samba Lata no Fabio Hatman.jpg' %}" alt="Imagem 1" class="carousel-item">
+                     <img src="{% static 'assets/fotos/Festa_IMG1.jpg' %}" alt="Imagem 2" class="carousel-item">
+                     <img src="{% static 'assets/fotos/Festa_IMG2.jpg' %}" alt="Imagem 3" class="carousel-item">
+                     <img src="{% static 'assets/fotos/Apresentação samba lata 2.jpg' %}" alt="Imagem 1" class="carousel-item">
                 </div>
                 
         <div class="carousel-overlay">
@@ -64,7 +66,7 @@
                 </div>
 
                 <div class="doacao-conteudo">
-                    <img src="static/assets/fotos/ong_leodesa_img3.jpg" alt="Imagem de doação" class="doacao-img">
+                    <img src="{% static 'assets/fotos/ong_leodesa_img3.jpg' %}" alt="Imagem de doação" class="doacao-img">
                 </div>
                 </div>
             </section>
@@ -72,19 +74,19 @@
             <section class="about">
                 <div class="about-info">
                     <div class="img-sobrenos">
-                        <img src="static/assets/fotos/foto1.jpg" alt="imagem-da-ong-1">
-                        <img src="static/assets/fotos/foto2.jpg" alt="imagem-da-ong-2">
-                        <img src="static/assets/fotos/foto3.jpg" alt="imagem-da-ong-3">
-                        <img src="static/assets/fotos/foto4.jpg" alt="imagem-da-ong-4">
-                        <img src="static/assets/fotos/foto5.jpg" alt="imagem-da-ong-5">
-                        <img src="static/assets/fotos/foto6.jpg" alt="imagem-da-ong-6">
-                        <img src="static/assets/fotos/foto7.jpg" alt="imagem-da-ong-7">
-                        <img src="static/assets/fotos/foto8.jpg" alt="imagem-da-ong-8">
+                        <img src="{% static 'assets/fotos/foto1.jpg' %}" alt="imagem-da-ong-1">
+                        <img src="{% static 'assets/fotos/foto2.jpg' %}" alt="imagem-da-ong-2">
+                        <img src="{% static 'assets/fotos/foto3.jpg' %}" alt="imagem-da-ong-3">
+                        <img src="{% static 'assets/fotos/foto4.jpg' %}" alt="imagem-da-ong-4">
+                        <img src="{% static 'assets/fotos/foto5.jpg' %}" alt="imagem-da-ong-5">
+                        <img src="{% static 'assets/fotos/foto6.jpg' %}" alt="imagem-da-ong-6">
+                        <img src="{% static 'assets/fotos/foto7.jpg' %}" alt="imagem-da-ong-7">
+                        <img src="{% static 'assets/fotos/foto8.jpg' %}" alt="imagem-da-ong-8">
                     </div>
 
                     <div class="botoes-galeria-acao">
-                        <a href="sobre.html" class="btn-acao primario">Quero saber mais sobre a ONG</a>
-                        <a href="projetos.html" class="btn-acao secundario">Quero conhecer os projetos</a>
+                        <a href="{% url 'sobre' %}" class="btn-acao primario">Quero saber mais sobre a ONG</a>
+                        <a href="{% url 'projetos' %}" class="btn-acao secundario">Quero conhecer os projetos</a>
                     </div>
 
 
@@ -123,11 +125,11 @@
                 <div class="footer_links">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="doacao.html">Fazer Doação</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="{% url 'index' %}">Início</a></li>
+                        <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                        <li><a href="{% url 'projetos' %}">Projetos</a></li>
+                        <li><a href="{% url 'doacao' %}">Fazer Doação</a></li>
+                        <li><a href="{% url 'contato' %}">Contato</a></li>
                     </ul>
                 </div>
 
@@ -151,8 +153,8 @@
             </div>
         </div>
     </footer>
-    <script src="static/js/script.js"></script>
-    <script src="static/js/home.js"></script>
+    <script src="{% static 'js/script.js' %}"></script>
+    <script src="{% static 'js/home.js' %}"></script>
 
 </body>
 </html>

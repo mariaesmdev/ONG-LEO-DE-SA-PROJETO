@@ -1,30 +1,31 @@
+{% load static %}
 <!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ong Criança Leo de Sá</title>
-    <link rel="stylesheet" href="static/css/style.css">
-    <link rel="stylesheet" href="static/css/sobre.css">
+    <link rel="stylesheet" href="{% static 'css/style.css' %}">
+    <link rel="stylesheet" href="{% static 'css/sobre.css' %}">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Quicksand:wght@300..700&display=swap" rel="stylesheet">
+    {% load static %}
 </head>
 <body>
     <header>
         <div class="container header_cont">
-            <a href="index.html" class="logo">
-                <img src="static/assets/icons/logo.png" alt="Logo Instituto da Criança Léo de Sá" width="48" height="48">
+            <a href="{% url 'index' %}" class="logo"> 
+                <img src="{% static 'assets/icons/logo.png' %}" alt="Logo Instituto da Criança Léo de Sá" width="48" height="48">
             </a>
-
             <nav class="nav" id="nav">
                 <ul class="nav_lista">
-                    <li><a href="index.html" class="nav_link">Inicio</a></li>
-                    <li><a href="sobre.html" class="nav_link">Sobre</a></li>
-                    <li><a href="projetos.html" class="nav_link">Projetos</a></li>
-                    <li><a href="doacao.html" class="nav_link">Fazer Doação</a></li>
-                    <li><a href="contato.html" class="nav_link">Contato</a></li>
+                    <li><a href="{% url 'index' %}" class="nav_link">Inicio</a></li>
+                    <li><a href="{% url 'sobre' %}" class="nav_link">Sobre</a></li>
+                    <li><a href="{% url 'projetos' %}" class="nav_link">Projetos</a></li>
+                    <li><a href="{% url 'doacao' %}" class="nav_link">Fazer Doação</a></li>
+                    <li><a href="{% url 'contato' %}" class="nav_link">Contato</a></li>
                 </ul>
             </nav>
 
@@ -58,7 +59,7 @@
                         </div>
 
                         <div class="img-sobre">
-                            <img src="static/assets/fotos/sobre.jpg" alt="Atividades culturais da ONG">
+                            <img src="{% static 'assets/fotos/sobre.jpg' %}" alt="Atividades culturais da ONG">
                         </div>
                     </div>
 
@@ -71,7 +72,7 @@
                         e transformem realidades.
                     </p>
 
-      <img src="static/assets/fotos/oficina jovem.jpg" alt="Crianças participando de atividades">
+      <img src="{% static 'assets/fotos/oficina jovem.jpg' %}" alt="Crianças participando de atividades">
 
       <!-- valores -->
       <div class="valores">
@@ -86,7 +87,7 @@
               transformação acontece de verdade.</strong>
           </p>
         </div>
-        <img src="static/assets/fotos/apresentação.jpg" alt="Equipe colaborando em projetos" class="img-valores">
+        <img src="{% static 'assets/fotos/apresentação.jpg' %}" alt="Equipe colaborando em projetos" class="img-valores">
       </div>
 
       <!-- historia -->
@@ -100,7 +101,7 @@
         Ao longo dos anos, nossos projetos <em>“Samba Lata”</em> e <em>“Sons da Diversidade”</em> vêm conquistando
         reconhecimento por sua relevância e impacto social.
       </p>
-      <img src="static/assets/fotos/samba lata.jpg" alt="Projeto Samba Lata" class="img-final">
+      <img src="{% static 'assets/fotos/samba lata.jpg' %}" alt="Projeto Samba Lata" class="img-final">
     </div>
   </div>
         </div>
@@ -127,11 +128,11 @@
                 <div class="footer_links">
                     <h4>Links</h4>
                     <ul>
-                        <li><a href="index.html">Início</a></li>
-                        <li><a href="sobre.html">Sobre</a></li>
-                        <li><a href="projetos.html">Projetos</a></li>
-                        <li><a href="doacao.html">Fazer Doação</a></li>
-                        <li><a href="contato.html">Contato</a></li>
+                        <li><a href="{% url 'index' %}">Início</a></li>
+                        <li><a href="{% url 'sobre' %}">Sobre</a></li>
+                        <li><a href="{% url 'projetos' %}">Projetos</a></li>
+                        <li><a href="{% url 'doacao' %}">Fazer Doação</a></li>
+                        <li><a href="{% url 'contato' %}">Contato</a></li>
                     </ul>
                 </div>
 
@@ -156,7 +157,7 @@
         </div>
     </footer>
 
-    <script src="static/js/sobre.js"></script>
-    <script src="static/js/script.js"></script>
+    <script src="{% static 'js/sobre.js' %}"></script>
+    <script src="{% static 'js/script.js' %}"></script>
 </body>
 </html>

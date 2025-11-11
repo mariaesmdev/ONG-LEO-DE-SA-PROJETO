@@ -79,7 +79,7 @@
 .simple-slider {
   width: 100%;
   max-width: 980px;
-  height: 220px;
+  height: 250px;
   margin: 0.75rem auto;
   position: relative;
   overflow: hidden;
@@ -104,11 +104,4 @@
   height: 100%;
   object-fit: cover;
   display: block;
-}
-
-@media (max-width: 720px) {
-  .simple-slider { height: 150px; }
-}
-@media (max-width: 420px) {
-  .simple-slider { height: 110px; }
 }
