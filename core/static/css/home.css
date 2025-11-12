@@ -6,7 +6,7 @@
   margin-top: 20px;
   padding: 10px;
 }
-header .container{
+header .container, footer .container {
   background-color: transparent;
 }
 .carousel {

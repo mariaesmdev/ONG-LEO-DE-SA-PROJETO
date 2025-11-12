@@ -6,11 +6,13 @@ from django.conf import settings
 from django.core.mail import EmailMessage
 
 from .forms import ContactForm
+from .models import ContactMessage, Post
 
 logger = logging.getLogger(__name__)
 
 def index(request):
-    return render(request, "index.html")
+    latest_posts = Post.objects.order_by('-created_at')[:3]
+    return render(request, "index.html",{"latest_posts": latest_posts})
 
 def sobre(request):
     return render(request, "sobre.html")
@@ -32,6 +34,12 @@ def contato(request):
             nome = form.cleaned_data["nome"]
             remetente = form.cleaned_data["email"]
             mensagem = form.cleaned_data["mensagem"]
+
+            # Salva a mensagem no banco para visualização no admin
+            try:
+                ContactMessage.objects.create(nome=nome, email=remetente, mensagem=mensagem)
+            except Exception:
+                logger.exception("Erro ao salvar ContactMessage")
 
             subject = f"Contato pelo site — {nome}"
             body = f"Nome: {nome}\nE-mail: {remetente}\n\nMensagem:\n{mensagem}"
