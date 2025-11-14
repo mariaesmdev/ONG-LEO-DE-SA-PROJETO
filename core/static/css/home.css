@@ -206,13 +206,14 @@ header .container, footer .container {
 
 /* parte do fb */
 .rede-section {
-    margin: 60px auto;
+    margin: 60px auto 120px auto;
     padding: 50px 20px;
     background: #f5f7fa; 
     border-radius: 20px;
     text-align: center;
     max-width: 900px;
     box-shadow: 0 4px 15px rgba(0,0,0,0.05);
+
 }
 
 .rede-title {
