@@ -1,0 +1,75 @@
+.contato {
+    padding: 2.5rem 0;
+}
+.contato__inner {
+    max-width: 800px;
+    margin: 0 auto;
+    background: var(--sub-fundo);
+    border-radius: 8px;
+    padding: 1.5rem;
+    box-shadow: 0 6px 18px rgba(0,0,0,0.06);
+}
+.contato__inner h2 {
+    margin: 0 0 1rem;
+    color: var(--text);
+    font-size: 1.5rem;
+    font-family: inherit;
+}
+.contato__form label {
+    display: block;
+    font-size: 0.9rem;
+    margin: 0.5rem 0 0.25rem;
+    color: var(--text);
+    font-family: inherit;
+}
+.contato__form input[type="text"],
+.contato__form input[type="email"],
+.contato__form textarea {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid var(--text);
+    border-radius: 6px;
+    font-family: inherit;
+    font-size: 1rem;
+    box-sizing: border-box;
+    background: var(--sub-fundo);
+    color: var(--text);
+}
+.contato__form textarea { resize: vertical; min-height: 140px; }
+
+.contato__actions {
+    margin-top: 1rem;
+    display: flex;
+    gap: 0.5rem;
+    justify-content: flex-end;
+}
+.contato__btn {
+    background: var(--azul-claro);
+    color: var(--text);
+    border: none;
+    padding: 0.65rem 1rem;
+    border-radius: 6px;
+    cursor: pointer;
+    font-weight: 600;
+    transition: transform 180ms ease, box-shadow 180ms ease, background-color 180ms ease;
+    will-change: transform;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+}
+.contato__btn:hover {
+    transform: scale(1.06);
+    box-shadow: 0 10px 24px rgba(0,0,0,0.10);
+}
+.contato__btn:active { transform: translateY(1px); }
+
+.contato__btn:focus-visible {
+    outline: 3px solid rgba(0,0,0,0.08);
+    outline-offset: 3px;
+}
+.contato-status { padding: .5rem; margin: .5rem 0; border-radius:6px; }
+.contato-status.success { background:#e6ffed; color:#044d18; border:1px solid #b5f0c6; }
+.contato-status.error { background:#ffecec; color:#7a0b0b; border:1px solid #f2c1c1; }
+
+.field-error { color:#b00; font-size:.95rem; margin-bottom:.5rem; }
+.form-control { width:100%; padding:.5rem; border-radius:4px; border:1px solid #ccc; box-sizing:border-box; }
