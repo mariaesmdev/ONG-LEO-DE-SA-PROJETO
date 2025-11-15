@@ -1,5 +1,5 @@
 .doacao{
-    background-color: var(--text);
+    background-color: var(--sub-fundo);
     border-radius: 10px;
     padding: 40px 20px;
     box-shadow: 0 4px 12px rgba(0,0,0,0.1);
@@ -8,6 +8,8 @@
     gap:2rem;
     text-align: center;
     align-items: center;
+    margin: 0 auto;
+    color: var(--text);
 }
 
 .texto_doacao h2 {
@@ -16,7 +18,7 @@
     margin-bottom: 10px;
 }
 .texto_doacao p {
-    color: var(--fundo);
+    color: var(--text);
     font-size: 1.1rem;
     line-height: 1.6;
     max-width: 700px;
@@ -58,7 +60,7 @@
 .duvidas_doacao{
     margin-top: 12px;
     font-size: 0.95rem;
-    color: var(--fundo);
+    color: var(--text);
     text-align: center;
 }
 

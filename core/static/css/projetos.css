@@ -1,14 +1,7 @@
-/* Estilos específicos para a página de Projetos */
-
-/* Reutilizando classes de sobre.css para consistência */
 .conteudo {
   width: 100%;
   padding: 60px 10%;
 }
-
-/* O estilo para h2 (que agora é o título principal) será herdado de sobre.css, garantindo a consistência. */
-
-/* Estilo para cada bloco de projeto */
 .projeto-bloco {
   display: flex;
   align-items: flex-start;
@@ -17,7 +10,7 @@
   flex-wrap: wrap;
   margin-bottom: 60px;
   padding: 30px;
-  background-color: var(--text);
+  background-color: var(--sub-fundo);
   border-radius: 10px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   transition: transform 0.3s ease, box-shadow 0.3s ease;
@@ -29,7 +22,7 @@
 }
 
 .projeto-bloco:nth-child(even) {
-  flex-direction: row-reverse; /* Alterna a ordem para um layout mais dinâmico */
+  flex-direction: row-reverse; 
 }
 
 .texto-projeto {
@@ -37,7 +30,6 @@
 }
 
 .texto-projeto h2 {
-  /* Mantendo o estilo de título de seção */
   color: var(--azul-claro);
   margin-bottom: 15px;
   border-left: 4px solid var(--azul-claro);
@@ -56,7 +48,7 @@
   margin-bottom: 15px;
   text-align: justify;
   font-size: 1.05rem;
-  color: var(--fundo);
+  color: var(--text);
 }
 
 .img-projeto {
@@ -72,10 +64,10 @@
   box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
 }
 
-/* Responsividade */
+
 @media (max-width: 992px) {
   .projeto-bloco {
-    flex-direction: column !important; /* Força a coluna em telas menores */
+    flex-direction: column !important;
     align-items: center;
     padding: 20px;
   }
@@ -95,10 +87,9 @@
 }
 
 @media (max-width: 600px) {
-  /* Removido o ajuste de h1, pois agora usamos h2 que é estilizado em sobre.css */
+
 }
 
-/* Animação de entrada (opcional, mas bom para manter a consistência com sobre.css) */
 .projeto-bloco {
   opacity: 0;
   transform: translateY(30px);

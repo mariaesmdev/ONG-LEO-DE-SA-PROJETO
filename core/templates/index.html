@@ -38,109 +38,105 @@
         </div>
     </header>
    
-    <main class="main">
+    <main class="main"> 
+        <div class="container">
+
             <section class="inicio">
                 <div class="carousel">
-                  <div class="carousel-images">
-                     <img src="{% static 'assets/fotos/sobre.jpg' %}" alt="Imagem 1" class="carousel-item">
-                     <img src="{% static 'assets/fotos/Apresentação do Samba Lata no Fabio Hatman.jpg' %}" alt="Imagem 1" class="carousel-item">
-                     <img src="{% static 'assets/fotos/Festa_IMG1.jpg' %}" alt="Imagem 2" class="carousel-item">
-                     <img src="{% static 'assets/fotos/Festa_IMG2.jpg' %}" alt="Imagem 3" class="carousel-item">
-                     <img src="{% static 'assets/fotos/Apresentação samba lata 2.jpg' %}" alt="Imagem 1" class="carousel-item">
-                </div>
-                
-        <div class="carousel-overlay">
-          <a href="{% url 'projetos' %}" ><button class="carousel-btn" onclick="window.location.href='sobre.html'"" >Conheça nossos projetos</button></a>
-        </div>
-            </section>
-        <div class="container">
-            <section class="doacao">
-                <div class="doacao-conteudo">
-                    <div class="text-doacao">
-                        <p>"A força de um sorriso começa com um gesto de amor." <br> <br>
-                            A cultura transforma. <br>
-                            Com sua doação, ajudamos mais crianças e jovens a descobrirem seus talentos e acreditarem em um futuro melhor.
-                    </p>
-                     <a href="{% url 'doacao' %}"><button class="btn-doar" onclick="window.location.href='doacao.html'">Fazer Doação </button></a>
-                </div>
-
-                <div class="doacao-conteudo">
-                    <img src="{% static 'assets/fotos/ong_leodesa_img3.jpg' %}" alt="Imagem de doação" class="doacao-img">
-                </div>
-                </div>
-            </section>
-
-            <section class="about">
-                <div class="about-info">
-                    <div class="img-sobrenos">
-                        <img src="{% static 'assets/fotos/foto1.jpg' %}" alt="imagem-da-ong-1">
-                        <img src="{% static 'assets/fotos/foto2.jpg' %}" alt="imagem-da-ong-2">
-                        <img src="{% static 'assets/fotos/foto3.jpg' %}" alt="imagem-da-ong-3">
-                        <img src="{% static 'assets/fotos/foto4.jpg' %}" alt="imagem-da-ong-4">
-                        <img src="{% static 'assets/fotos/foto5.jpg' %}" alt="imagem-da-ong-5">
-                        <img src="{% static 'assets/fotos/foto6.jpg' %}" alt="imagem-da-ong-6">
-                        <img src="{% static 'assets/fotos/foto7.jpg' %}" alt="imagem-da-ong-7">
-                        <img src="{% static 'assets/fotos/foto8.jpg' %}" alt="imagem-da-ong-8">
+                    <div class="carousel-images">
+                        <img src="{% static 'assets/fotos/sobre.jpg' %}" alt="Imagem 1" class="carousel-item">
+                        <img src="{% static 'assets/fotos/Apresentação do Samba Lata no Fabio Hatman.jpg' %}" alt="Imagem 1" class="carousel-item">
+                        <img src="{% static 'assets/fotos/Festa_IMG1.jpg' %}" alt="Imagem 2" class="carousel-item">
+                        <img src="{% static 'assets/fotos/Festa_IMG2.jpg' %}" alt="Imagem 3" class="carousel-item">
+                        <img src="{% static 'assets/fotos/Apresentação samba lata 2.jpg' %}" alt="Imagem 1" class="carousel-item">
                     </div>
-
-                    <div class="botoes-galeria-acao">
-                        <a href="{% url 'sobre' %}" class="btn-acao primario">Quero saber mais sobre a ONG</a>
-                        <a href="{% url 'contato' %}" class="btn-acao secundario">Entre em contato conosco</a>
+                <div class="carousel-overlay">
+                    <a href="{% url 'projetos' %}">
+                        <button class="carousel-btn" onclick="window.location.href='sobre.html'">Conheça nossos projetos</button>
+                    </a>
+                </div>
+            </section> 
+                <div class="content">
+                    <div class="doacao-conteudo">
+                        <div class="text-doacao">
+                            <p>"A força de um sorriso começa com um gesto de amor." <br><br>
+                                A cultura transforma. <br>
+                                Com sua doação, ajudamos mais crianças e jovens a descobrirem seus talentos e acreditarem em um futuro melhor.
+                            </p>
+                            <a href="{% url 'doacao' %}">
+                                <button class="btn-doar">Fazer Doação</button>
+                            </a>
+                        </div>
+                        <div class="doacao-img-box">
+                            <img src="{% static 'assets/fotos/ong_leodesa_img3.jpg' %}" 
+                                alt="Imagem de doação" class="doacao-img">
+                        </div>
                     </div>
+                    
+                    <section class="about">
+                        <div class="about-info">
+                            <div class="img-sobrenos">
+                                <img src="{% static 'assets/fotos/foto1.jpg' %}" alt="imagem-da-ong-1">
+                                <img src="{% static 'assets/fotos/foto2.jpg' %}" alt="imagem-da-ong-2">
+                                <img src="{% static 'assets/fotos/foto3.jpg' %}" alt="imagem-da-ong-3">
+                                <img src="{% static 'assets/fotos/foto4.jpg' %}" alt="imagem-da-ong-4">
+                                <img src="{% static 'assets/fotos/foto5.jpg' %}" alt="imagem-da-ong-5">
+                                <img src="{% static 'assets/fotos/foto6.jpg' %}" alt="imagem-da-ong-6">
+                                <img src="{% static 'assets/fotos/foto7.jpg' %}" alt="imagem-da-ong-7">
+                                <img src="{% static 'assets/fotos/foto8.jpg' %}" alt="imagem-da-ong-8">
+                            </div>
+                            <div class="botoes-galeria-acao">
+                                <a href="{% url 'sobre' %}" class="btn-acao primario">Quero saber mais sobre a ONG</a>
+                                <a href="{% url 'contato' %}" class="btn-acao secundario">Entre em contato conosco</a>
+                            </div>
+                        </div>
+                    </section>
 
+                    <h2 class="section-title">Últimas novidades</h2>
+                    <section class="latest-post container">
+                        {% for post in latest_posts %}
+                            <div class="post-card">
+                                <h3>{{ post.title }}</h3>
+                                {% if post.image %}
+                                    <img src="{{ post.image.url }}" alt="{{ post.title }}" class="post-image" style="width: 100%;max-width: 400px;height: 250px;object-fit: cover;border-radius: 8px;" />
+                                {% endif %}
+                                <p>{{ post.content }}</p>
+                                <br>
+                                <p class="post-meta">Publicado em: {{ post.created_at|date:"d/m/Y H:i" }}</p>
+                            </div>
+                        {% endfor %}
+                    </section>
 
+                    <div id="fb-root"></div>
+                    <script async defer crossorigin="anonymous"
+                        src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v17.0"></script>
 
-
-
-
-                </div>
-            </section>
-
-
-            <section class="latest-post container">
-                <h2 class="section-title">Últimas novidades</h2>
-                {% for post in latest_posts %}
-                <div class="post-card">
-                    <h3>{{ post.title }}</h3>
-                    {% if post.image %}
-                        <img src="{{ post.image.url }}" alt="{{ posts.title }}" class="post-image" style="max-width:100%;height:auto;" />
-                    {% endif %}
-                    <p>{{ post.content }}</p>
-                    <p class="post-meta">Publicado em: {{ post.created_at|date:"d/m/Y H:i" }}</p>
-                </div>
-                {% endfor %}
-            </section>
-            <div id="fb-root"></div>
-            <script async defer crossorigin="anonymous"
-            src="https://connect.facebook.net/pt_BR/sdk.js#xfbml=1&version=v17.0"></script>
-
-     <div class="midias-container">
-
-   
-
-    <!-- FACEBOOK -->
- <section class="rede-section">
-
-    <h2 class="rede-title">Acompanhe nossas redes</h2>
-    <p class="rede-subtitle">Fique por dentro das nossas ações e projetos</p>
-
-    <div class="midia-item">
-        <div class="midia-card">
-            <div class="fb-page"
-                data-href="https://www.facebook.com/Institutoleodesa"
-                data-tabs="timeline"
-                data-width="450"
-                data-height="400"
-                data-small-header="true"
-                data-adapt-container-width="true"
-                data-hide-cover="false"
-                data-show-facepile="true">
+                    <div class="midias-container">
+                        <!-- FACEBOOK -->
+                        <section class="rede-section">
+                            <h2 class="rede-title">Acompanhe nossas redes</h2>
+                            <p class="rede-subtitle">Fique por dentro das nossas ações e projetos</p>
+                            <div class="midia-item">
+                                <div class="midia-card">
+                                    <div class="fb-page"
+                                        data-href="https://www.facebook.com/Institutoleodesa"
+                                        data-tabs="timeline"
+                                        data-width="450"
+                                        data-height="400"
+                                        data-small-header="true"
+                                        data-adapt-container-width="true"
+                                        data-hide-cover="false"
+                                        data-show-facepile="true">
+                                    </div>
+                                </div>
+                            </div> 
+                        </section>
+                    </div> 
+                </div> 
             </div>
-        </div>
-    </div> 
-</section>
-
-
+        </div> 
+    <div>
+    </main>
     <footer class="footer">
         <div class="container footer_cont">
             <div class="footer_top">
@@ -166,7 +162,7 @@
                 </div>
                 <div class="footer_logo">
                     <h2>Instituto da Criança Léo de Sá</h2>
-                    <p class="footer_tag">Promovendo <strong>educação e cultura para o crescimento de crianças e jovens </strong>,valorizamos o aprendizado, a criatividade e o desenvolvimento humano.</p>
+                    <p class="footer_tag">Promovendo <strong>educação e cultura para o crescimento de crianças e jovens</strong>, valorizamos o aprendizado, a criatividade e o desenvolvimento humano.</p>
                 </div>
                 <div class="footer_links">
                     <h4>Links</h4>
@@ -202,6 +198,5 @@
     </footer>
     <script src="{% static 'js/script.js' %}"></script>
     <script src="{% static 'js/home.js' %}"></script>
-
 </body>
 </html>

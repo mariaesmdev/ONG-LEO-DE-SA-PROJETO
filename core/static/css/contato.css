@@ -1,20 +1,17 @@
-.container section{
-  background-color: transparent;
-}
 .contato {
     padding: 2.5rem 0;
 }
 .contato__inner {
     max-width: 800px;
     margin: 0 auto;
-    background: var(--text);
+    background: var(--sub-fundo);
     border-radius: 8px;
     padding: 1.5rem;
     box-shadow: 0 6px 18px rgba(0,0,0,0.06);
 }
 .contato__inner h2 {
     margin: 0 0 1rem;
-    color: var(--fundo);
+    color: var(--text);
     font-size: 1.5rem;
     font-family: inherit;
 }
@@ -22,7 +19,7 @@
     display: block;
     font-size: 0.9rem;
     margin: 0.5rem 0 0.25rem;
-    color: var(--fundo);
+    color: var(--text);
     font-family: inherit;
 }
 .contato__form input[type="text"],
@@ -30,13 +27,13 @@
 .contato__form textarea {
     width: 100%;
     padding: 0.75rem;
-    border: 1px solid var(--fundo);
+    border: 1px solid var(--text);
     border-radius: 6px;
     font-family: inherit;
     font-size: 1rem;
     box-sizing: border-box;
-    background: var(--text);
-    color: var(--fundo);
+    background: var(--sub-fundo);
+    color: var(--text);
 }
 .contato__form textarea { resize: vertical; min-height: 140px; }
 

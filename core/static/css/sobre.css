@@ -10,8 +10,9 @@
 .conteudo {
   width: 100%;
   padding: 60px 10%;
-  background-color: var(--text);
+  background-color: var(--sub-fundo);
   border-radius: 10px;
+  color: var(--text)
 }
 
 /* sobre */
@@ -89,8 +90,8 @@
 
 .valores h2 {
   width: 100%;
-  color: #007b8f;
-  border-left: 4px solid #007b8f;
+  color: var(--azul-claro);
+  border-left: 4px solid var(--azul-claro);
   padding-left: 10px;
   margin-bottom: 10px; 
 }

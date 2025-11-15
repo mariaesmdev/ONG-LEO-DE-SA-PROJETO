@@ -1,23 +1,21 @@
-:root {
-    --azul-claro: #00aeef;
-    --azul-escuro: #1a237e;
-    --text: Black;
-    --fundo: #F5F5F5;
-    --sub-fundo: White;
+@media (prefers-color-scheme: light) { 
+    :root {
+        --azul-claro: #00aeef;
+        --azul-escuro: #1a237e;
+        --text: Black;
+        --fundo: #F5F5F5;
+        --sub-fundo: White;
+    }
 }
-
 @media (prefers-color-scheme: dark) { 
     :root {
-    --azul-claro:#0077b6;
-    --azul-escuro:#0d1440;
+    --azul-claro:#66cff4;
+    --azul-escuro:#4d58a8;
     --text: White;
     --fundo: #121212;
     --sub-fundo: #1E1E1E;
 
     }
-    .footer {
-    color:var(--text);
-}
 }
 
 * {
@@ -28,7 +26,7 @@
 body {
     font-family: "Quicksand", sans-serif;
     line-height:1.6;
-    background-color: var(--sub-fundo); 
+    background-color: var(--fundo); 
 }
 .container{
     width: 90%;
@@ -80,7 +78,7 @@ header {
     gap: 1.5rem;
 }
 .nav_link{
-    color: var(--fundo);
+    color: var(--text);
     text-decoration: none;
     font-weight: bold;
     font-size: 18px;
@@ -108,18 +106,18 @@ header {
 .mobile-linha{
     width: 30px;
     height: 3px;
-    background-color: var(--fundo);
+    background-color: white;
 }
 
 .main{
     padding:120px 0 20px 0;
 }
 .footer {
-    background-color: var(--azul-escuro);
+    background-color: #1a237e;
     padding: 2rem 0;
     color: inherit;
     font-size: 0.95rem;
-    color: var(--text);
+    color: white;
 }
 
 .footer_top {
@@ -273,11 +271,11 @@ header {
     .mobile-linha{
         width: 30px;
         height: 3px;
-        background-color: var(--fundo);
         display: block;
         margin: 2px 0;
         transition: transform 0.28s ease, opacity 0.18s ease, background-color 0.18s ease;
         transform-origin: center;
+        background-color: var(--text);
     }
     
     .header_mobile.open .mobile-linha:nth-child(1){
@@ -327,7 +325,7 @@ header {
         text-align: center;
     }
 }
-@media (max-width: 480px){
+@media (max-width: 540px){
     .footer_top{
         grid-template-columns: 1fr;
     }
@@ -339,21 +337,19 @@ header {
     }
 }
 @media (prefers-color-scheme: dark) { 
-    .footer, .footer_social a{
-        color:var(--fundo);
-    }
     header{
-        background-color: var(--azul-escuro);
+        background-color: #1a237e;
     }
     .logo img{
         filter: none;
-        background-color: rgba(255, 255, 255, 0.6);
+        background-color: rgba(255, 255, 255, 0.5);
         border-radius: 60px;
     }
-    body{
-        background-color: #1a232e;
+    @media (max-width: 768px){
+        .nav_lista{
+        background-color: rgba(30, 30, 30, 0.8);
+        }
     }
-
 }
 
 
