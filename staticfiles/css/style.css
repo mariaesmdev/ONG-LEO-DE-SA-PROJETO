@@ -17,6 +17,9 @@
 
     }
 }
+html{
+    font-size:16px;
+}
 
 * {
     margin: 0;
@@ -353,10 +356,9 @@ header {
     header {
         background-color: #1a237e;
     }
-    .logo img {
-        filter: none;
-        background-color: rgba(255, 255, 255, 0.5);
-        border-radius: 60px;
+    .logo img{
+        background-color:white;
+        border-radius:10px;
     }
 }
 
@@ -386,29 +388,36 @@ header {
 
 
 @media (max-width: 768px) {
-
+    html{
+        font-size:14px;
+    }
     .doacao-conteudo {
         flex-direction: column;
         align-items: flex-start;
-        **width: 100%;** }
+        width: 100%; }
 
     .text-doacao {
         width: 100%;
-        padding: 30px 15px 30px 15px;
+        padding: 30px 15px 80px 15px;
         text-align: left;
+        height: auto;
+        min-height: auto;
+        margin: 20px auto;
     }
-
-
-    .content {
-        width: 100%;
-    }
-}}
-
-@media (max-width: 768px) {
     .main {
         padding-top: 100px;
     }
+
+
+.btn-doar {
+    display: inline-block;
+    margin: 15px 0 0 0;
 }
+.content {
+    width: 100%;
+}
+
+
 
 
 
