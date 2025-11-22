@@ -89,7 +89,7 @@ Este projeto foi desenvolvido por:
 
 Cauã Novaes — Função: Desenvolvedor Backend e Frontend
 
-Maria Eduarda Machado — Função: Desenvolvedor Frontend e Backend
+Maria Eduarda Machado — Função: Desenvolvedora Frontend e Backend
 
 Isabela Rodrigues — Função: Desenvolvedora Frontend
 
